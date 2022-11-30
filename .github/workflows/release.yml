@@ -1,0 +1,31 @@
+name: release and changelog
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: release
+        uses: madeiramadeirabr/action-generate-release@production
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  changelog:
+    runs-on: ubuntu-latest
+    name: 'Changelog'
+    needs: release
+    steps:
+      - name: Changelog
+        id: changelog
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: update package.json
+        uses: madeiramadeirabr/action-generate-changelog@0.1.3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
