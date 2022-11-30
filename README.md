@@ -1,5 +1,4 @@
-![img](https://github.com/madeiramadeirabr/action-generate-changelog/blob/production/img/action-generate-changelog.svg)
-# action-generate-changelog
+# Super Changelog
 
 ## Description
 Esta action procura a versão lançada recentemente da tag do repositório e verifica se ela atende aos seguintes requisitos:
@@ -9,8 +8,6 @@ Esta action procura a versão lançada recentemente da tag do repositório e ver
 
 Esta action também altera a versão do arquivo `package.json` da branch padrão e gera o changelog.
 
-## Squad:
-[SRE Team](https://github.com/orgs/madeiramadeirabr/teams/team-platform-services 'SRE Team')
 
 ## Requisitos:
 - Existir uma tag no repositório
@@ -18,7 +15,7 @@ Esta action também altera a versão do arquivo `package.json` da branch padrão
 ## Exemplos
 
 ```yml
-uses: madeiramadeirabr/action-generate-changelog@0.1.3
+uses: archaic10/action-generate-changelog@main
 with:
     github-token: ${{ secrets.GITHUB_TOKEN }}
     path: '/src'
@@ -26,7 +23,7 @@ with:
 ## Ou
 
 ```yml
-uses: madeiramadeirabr/action-generate-changelog@0.1.3
+uses: archaic10/action-generate-changelog@main
 with:
     github-token: ${{ secrets.GITHUB_TOKEN }}
 ```
