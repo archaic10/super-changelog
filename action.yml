@@ -11,5 +11,5 @@ outputs:
   success:
     description: 'the result will be printed here'
 runs:
-  using: 'node16'
+  using: 'node14'
   main: 'dist/index.js'

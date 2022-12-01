@@ -15,7 +15,7 @@ Esta action também altera a versão do arquivo `package.json` da branch padrão
 ## Exemplos
 
 ```yml
-uses: archaic10/action-generate-changelog@main
+uses: archaic10/super-changelog@main
 with:
     github-token: ${{ secrets.GITHUB_TOKEN }}
     path: '/src'
@@ -23,7 +23,7 @@ with:
 ## Ou
 
 ```yml
-uses: archaic10/action-generate-changelog@main
+uses: archaic10/super-changelog@main
 with:
     github-token: ${{ secrets.GITHUB_TOKEN }}
 ```
